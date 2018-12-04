@@ -32,10 +32,12 @@ public class Sequencer {
 //	    	request.ipAdress=fe.ipAdress;         //assume that work
 	    	request.ipAdress="";
 	    	request.portNumber=fe.portNumber;
-	    	request.SeqNumber=SeqNumber++;
+	    	request.SeqNumber=SeqNumber;
 	    	request.message=fe.message;
 	    	requestQue.add(request);
+	    	requestBuffer.PutRequest(SeqNumber, request);
 	    	request.getClass();
+	    	SeqNumber++;
 	    	
 		}
 	
@@ -66,7 +68,8 @@ public class Sequencer {
 			
 			
 			
-		//}
+			
+		}
 	}
 			
 
